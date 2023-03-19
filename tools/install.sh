@@ -38,7 +38,7 @@ main() {
   install_yadm
 
   # If cloning fails, this means that yadm is already installed and we shoudl bootstrap
-  yadm clone --bootstrap git@github.com:benemer/dotfiles.git 2>/dev/null || yadm bootstrap
+  yadm clone --bootstrap https://github.com/benemer/dotfiles.git 2>/dev/null || yadm bootstrap
 }
 
 main "$@"
