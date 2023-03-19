@@ -47,8 +47,6 @@ install_zsh() {
     https://github.com/zsh-users/zsh-autosuggestions \
     ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 2>/dev/null || true
 
-  # Copy custom configuration to the oh my sh installation
-  cp -r $HOME/.oh-my-zsh-custom/* ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/
 }
 
 install_nodejs() {
