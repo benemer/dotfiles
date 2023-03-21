@@ -103,7 +103,6 @@ install_cpp_utils() {
 
 install_shell_utils() {
   install_pkgs htop silversearcher-ag tree tig
-  pip3 install thefuck
 }
 
 install_tmux() {
@@ -118,19 +117,12 @@ install_ssh() {
   install_pkgs openssh-client openssh-server sshfs
 }
 
-install_fonts() {
-  # I have my own SF-Mono patched fonts, but just in case install powerline packaged fonts
-  install_pkgs fonts-powerline
-  fc-cache -f -v
-}
-
 minimal_installation() {
   echo "Running minimal installation, just zsh, neovim, tmux, and some binutils"
   install_essential_tools
   install_zsh
   install_neovim
   install_tmux
-  install_fonts
 }
 
 full_installation() {

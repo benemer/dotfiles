@@ -5,7 +5,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source %
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 Plug 'antoinemadec/coc-fzf'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin' }
@@ -19,6 +19,4 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'kevinoid/vim-jsonc'
 Plug 'morhetz/gruvbox'
-
 call plug#end()
-
