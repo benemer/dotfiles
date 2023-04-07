@@ -19,3 +19,4 @@ alias v="nvim"
 alias vim="nvim"
 alias vi="nvim"
 alias t='tmux'
+alias cat='bat'

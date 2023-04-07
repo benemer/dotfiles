@@ -117,12 +117,19 @@ install_ssh() {
   install_pkgs openssh-client openssh-server sshfs
 }
 
+install_bat() {
+  wget -c https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-musl_0.22.1_amd64.deb
+  sudo apt install ./bat-musl_0.22.1_amd64.deb
+  rm ./bat-musl_0.22.1_amd64.deb
+}
+
 minimal_installation() {
   echo "Running minimal installation, just zsh, neovim, tmux, and some binutils"
   install_essential_tools
   install_zsh
   install_neovim
   install_tmux
+  install_bat
 }
 
 full_installation() {
