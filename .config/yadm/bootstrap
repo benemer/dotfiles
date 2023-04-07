@@ -123,6 +123,18 @@ install_bat() {
   rm ./bat-musl_0.22.1_amd64.deb
 }
 
+install_keyd(){
+  git clone https://github.com/rvaiya/keyd
+  cd keyd
+  make
+  sudo make install
+  rm -rf keyd
+  sudo systemctl enable keyd
+  sudo systemctl start keyd
+  sudo cp .config/keyboard/keyd.conf /etc/keyd/default.conf
+  sudo keyd reload
+}
+
 minimal_installation() {
   echo "Running minimal installation, just zsh, neovim, tmux, and some binutils"
   install_essential_tools
