@@ -5,22 +5,21 @@
   "coc.source.word.filetypes": ["markdown", "latex"],
   "inlayHint.enable": false,
   "diagnostic.enable": true,
-  "clangd.enabled": true,
   "clangd.compilationDatabaseCandidates": [
     "${workspaceFolder}",
     "${workspaceFolder}/build/",
-    "${workspaceFolder}/_skbuild/linux-x86_64-3.8/cmake-build/"
+    "${workspaceFolder}/_skbuild/linux-x86_64-3.10/cmake-build/",
+    "${workspaceFolder}/python/_skbuild/linux-x86_64-3.10/cmake-build/"
   ],
   "clangd.arguments": [
     "--background-index",
     "--clang-tidy",
-    "--fallback-style=Google",
     "--header-insertion=iwyu",
-    "--suggest-missing-includes",
-    "-j=8"
+    "-j=12"
   ],
   "python.pythonPath": "python3",
   "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": ["--extension-pkg-whitelist=pyopenvdb"],
   "explorer.root.strategies": ["cwd", "reveal", "sourceBuffer", "workspace"],
   "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
   "explorer.file.root.template": "[icon & 1] PROJECT ([root])",
@@ -37,11 +36,10 @@
   "explorer.previewAction.onHover": false,
   "explorer.openAction.strategy": "sourceWindow",
   "explorer.keyMappings.global": {
-    "<cr>": [
-      "wait",
-      "expandable?",
-      "expand",
-      "open"
-    ]
+    "<cr>": ["wait", "expandable?", "expand", "open"]
+  },
+  "markdownlint.config": {
+    "default": true,
+    "line_length": false
   }
 }

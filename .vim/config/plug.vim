@@ -6,10 +6,12 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 Plug 'antoinemadec/coc-fzf'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lervag/vimtex'
 Plug 'nachovizzo/committia.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

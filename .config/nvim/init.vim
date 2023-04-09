@@ -9,3 +9,5 @@ source ~/.vim/config/functions.vim
 source ~/.vim/config/keybindings.vim
 source ~/.vim/config/plugins_config.vim
 source ~/.vim/config/plugins_keys.vim
+
+luafile ~/.vim/config/init.lua
