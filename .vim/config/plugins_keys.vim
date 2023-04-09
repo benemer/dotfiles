@@ -49,7 +49,7 @@ xmap <silent>gc <Plug>NERDCommenterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => BufferLine
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Jump buffer buffer with just ALT+h or ALT+l
+" Jump buffer buffer with just Shift+h or Shift+l
 nnoremap <silent>H :BufferLineCyclePrev<CR>
 nnoremap <silent>L :BufferLineCycleNext<CR>
 
