@@ -64,3 +64,8 @@ let g:vimtex_quickfix_ignore_filters = [
       \ 'LaTeX Font',
       \ 'Float too large',
       \]
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => gutentags disabled by defualt
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gutentags_enabled = 0
