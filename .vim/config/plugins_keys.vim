@@ -44,12 +44,11 @@ xmap <silent>gc <Plug>NERDCommenterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => fzf plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <C-p> :Files<cr>
+ map <C-p> :Files<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => BufferLine
+" => VimTeX
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Jump buffer buffer with just ALT+h or ALT+l
-nnoremap <silent><M-h> :BufferLineCyclePrev<CR>
-nnoremap <silent><M-l> :BufferLineCycleNext<CR>
+nmap <localleader>c <Cmd>update<CR><Cmd>VimtexCompileSS<CR>
+nmap <localleader>v <plug>(vimtex-view)
 

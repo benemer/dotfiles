@@ -4,9 +4,7 @@
 let mapleader = " "
 
 " Enable filetype plugins
-filetype plugin on
-filetype indent on
-
+filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -16,7 +14,7 @@ set backspace=eol,start,indent
 set clipboard^=unnamed,unnamedplus
 set cmdheight=1
 set colorcolumn=+1
-set completeopt+=menuone,noselect
+set completeopt+=menu
 set cursorline
 set hidden
 set ignorecase
@@ -35,14 +33,19 @@ set textwidth=100
 set whichwrap+=<,>,h,l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => coc.nvim settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set signcolumn=number
+set updatetime=300
+set shortmess+=c
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on
+syntax enable
 colorscheme gruvbox
 set background=dark
-set colorcolumn=100
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_invert_selection='0'
-syntax enable
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
