@@ -135,6 +135,13 @@ install_keyd(){
   sudo keyd reload
 }
 
+install_fonts(){
+  mkdir -p ~/.local/share/fonts
+  cd ~/.local/share/fonts
+  curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+  fc-cache -fv
+}
+
 minimal_installation() {
   echo "Running minimal installation, just zsh, neovim, tmux, and some binutils"
   install_essential_tools
@@ -142,6 +149,7 @@ minimal_installation() {
   install_neovim
   install_tmux
   install_bat
+  install_fonts
 }
 
 full_installation() {
