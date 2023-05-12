@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# @file      create_video_from_png.sh
+# @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
+#
+# Copyright (c) 2020 Ignacio Vizzo, all rights reserved
+DIR=$@
+mkdir -p videos
+FILENAME="videos/$(basename $DIR).mp4"
+echo "Rendering png files from $DIR to $FILENAME"
+ffmpeg -framerate 10 -pattern_type glob -i "$DIR/*.png" -vcodec libx264 -crf 25  -pix_fmt yuv420p  $FILENAME

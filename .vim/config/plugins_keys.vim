@@ -44,12 +44,18 @@ xmap <silent>gc <Plug>NERDCommenterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => fzf plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <C-p> :Files<cr>
+ map <C-p> :Files<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => BufferLine
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Jump buffer buffer with just ALT+h or ALT+l
-nnoremap <silent><M-h> :BufferLineCyclePrev<CR>
-nnoremap <silent><M-l> :BufferLineCycleNext<CR>
+" Jump buffer buffer with just Shift+h or Shift+l
+nnoremap <silent>H :BufferLineCyclePrev<CR>
+nnoremap <silent>L :BufferLineCycleNext<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VimTeX
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <localleader>c <Cmd>update<CR><Cmd>VimtexCompileSS<CR>
+nmap <localleader>v <plug>(vimtex-view)
 

@@ -19,3 +19,5 @@ alias t='tmux'
 alias xopen='xdg-open'
 alias xcopy='xclip -selection clipboard'
 alias copywd='pwd | tr "\n" "\b" | xclip -selection clipboard'
+
+alias cat='bat'
