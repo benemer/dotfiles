@@ -10,12 +10,12 @@ plugins=(
     colored-man-pages
     command-not-found
     extract
-    fzf
     git
     tmux
     z
     zsh-autosuggestions
     vi-mode
+    fzf
 )
 
 source $ZSH/oh-my-zsh.sh
