@@ -3,7 +3,7 @@ Work in Progess!
 Requires `curl`. Install minimal with 
 
 ```bash
-"$(curl -fsSL https://raw.githubusercontent.com/benemer/dotfiles/main/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/benemer/dotfiles/main/tools/install.sh)"
 ```
 
 or
