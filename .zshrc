@@ -5,6 +5,7 @@ HYPHEN_INSENSITIVE="true"
 ZSH_TMUX_AUTOCONNECT="false"
 ZSH_TMUX_AUTOQUIT="true"
 ZSH_TMUX_AUTOSTART="false"
+DISABLE_MAGIC_FUNCTIONS="true"
 
 plugins=(
     colored-man-pages
@@ -17,7 +18,6 @@ plugins=(
     vi-mode
     fzf
 )
-
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases.zsh
 source $HOME/.functions.zsh
