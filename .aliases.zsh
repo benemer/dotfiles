@@ -15,6 +15,7 @@ alias v="nvim"
 alias vim="nvim"
 alias vi="nvim"
 alias t='tmux'
+alias za='zathura --fork'
 
 alias xopen='xdg-open'
 alias xcopy='xclip -selection clipboard'
