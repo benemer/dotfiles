@@ -57,10 +57,10 @@ map [fullscreen] p8 set "pages-per-row 8"
 map [fullscreen] p8 set "pages-per-row 9"
 
 # Make the scroll keybinding the same as vimium
-map [normal]     d scroll half-down
-map [fullscreen] d scroll half-down
-map [normal]     u scroll half-up
-map [fullscreen] u scroll half-up
+map [normal]     h scroll half-down
+map [fullscreen] h scroll half-down
+map [normal]     l scroll half-up
+map [fullscreen] l scroll half-up
 
 # Allow to set white background for reading
 map [normal] w set "default-bg \"#FFFFFF\""
