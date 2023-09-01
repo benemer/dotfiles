@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Tmuxinator
+export EDITOR='nvim'
+
 # PATH
 export PATH=$PATH:/usr/bin
 export PATH=$PATH:/usr/local/bin
