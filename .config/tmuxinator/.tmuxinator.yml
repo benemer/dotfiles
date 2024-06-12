@@ -1,0 +1,17 @@
+# ./.tmuxinator.yml
+
+name: <%= @args[0] %>
+startup_window: write
+windows:
+  - write:
+      panes:
+        - nvim
+  - run:
+      panes:
+        - 
+  - watch:
+      layout: vertical
+      panes:
+        - htop
+        - nvtop
+    
