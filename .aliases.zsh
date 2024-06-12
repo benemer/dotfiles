@@ -6,7 +6,7 @@ alias ag='ag -u'
 
 
 alias ts='tmux new-session -s $(basename $(pwd))'
-alias tp=' tmuxinator start -p $HOME/.config/tmuxinator/.tmuxinator.yml $(basename $(pwd))'
+alias tp='tmuxinator start -p $HOME/.config/tmuxinator/.tmuxinator.yml $(basename $(pwd))'
 
 alias gco='git checkout'
 alias gs='git status'
