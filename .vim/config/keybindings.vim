@@ -44,6 +44,7 @@ vmap <silent><leader>r :call VisualSelection('replace', '')<cr>
 " => Function Calls
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <Leader>ipdb :call InsertIpdbLine()<cr>
+map <Leader>pcd :call InsertO3dLine()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Useful mappings to make search results appear in the middle of the screen

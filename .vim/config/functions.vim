@@ -24,9 +24,14 @@ endfunction
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Inster Python debugger inline
+" => Custom inline functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! InsertIpdbLine()
   let trace = expand("import ipdb; ipdb.sset_trace()")
   execute "normal o".trace
+endfunction
+
+function! InsertO3dLine()
+  let trace = expand("o3d.geometry.PointCloud(o3d.utility.Vector3dVector())")
+  execute "normal i".trace
 endfunction
