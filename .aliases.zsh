@@ -3,7 +3,7 @@ alias tree='tree -C'
 alias rescan="nmcli device wifi rescan"
 alias list="nmcli device wifi list"
 alias ts='tmux new-session -s $(basename $(pwd))'
-alias ag='ag -U'
+alias ag='ag -u'
 
 alias gco='git checkout'
 alias gs='git status'
