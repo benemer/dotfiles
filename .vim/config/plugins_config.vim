@@ -69,3 +69,4 @@ let g:vimtex_quickfix_ignore_filters = [
 " => gutentags disabled by defualt
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gutentags_enabled = 0
+set statusline+=%{gutentags#statusline()}
