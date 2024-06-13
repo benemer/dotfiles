@@ -10,8 +10,6 @@ windows:
       panes:
         - 
   - watch:
-      layout: vertical
       panes:
         - htop
-        - nvtop
     
