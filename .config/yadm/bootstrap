@@ -32,7 +32,7 @@ install_pkgs() {
   $RUN apt install --no-install-recommends -y "$@"
 }
 
-install_ohmyzsh() {
+install_zsh() {
   install_pkgs curl zsh
   
   export CHSH=no
