@@ -81,7 +81,7 @@ install_neovim() {
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
   rm -rf /opt/nvim
   tar -C /opt -xzf nvim-linux64.tar.gz
-  $RUN ln -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
+  $RUN ln -s -f /opt/nvim-linux64/bin/nvim /usr/bin/nvim
 
   # Install vim-plug packages
   nvim --headless -u $HOME/.vim/config/plug.vim +PlugInstall +qall
