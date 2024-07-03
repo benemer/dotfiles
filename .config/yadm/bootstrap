@@ -46,7 +46,6 @@ install_zsh() {
 
   # If user shell is not zsh, change it (password required)
   if [ ! "$(basename "$SHELL")" = "zsh" ]; then
-    RUN=$(command_exists sudo && echo "sudo" || echo "command")
     $RUN chsh -s "$(which zsh)" "$USER" 2>/dev/null || chsh -s "$(which zsh)"
   fi
 
