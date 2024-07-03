@@ -32,21 +32,28 @@ install_pkgs() {
   $RUN apt install --no-install-recommends -y "$@"
 }
 
-install_zsh() {
+install_ohmyzsh() {
   install_pkgs curl zsh
-
-  # Install ohmyzsh
+  
   export CHSH=no
   export KEEP_ZSHRC=yes
   export RUNZSH=no
-  ZSH= sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
-  $RUN chsh -s "$(which zsh)" "$USER" 2>/dev/null || chsh -s "$(which zsh)"
+  export OHMYZSH_URL=https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
+  export ZSH_CUSTOM=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}
+
+  # Instal oh-my-zsh always, update if already istalled
+  ZSH= sh -c "$(curl -fsSL $OHMYZSH_URL/tools/install.sh)" >/dev/null || zsh -i -c "omz update"
+
+  # If user shell is not zsh, change it (password required)
+  if [ ! "$(basename "$SHELL")" = "zsh" ]; then
+    RUN=$(command_exists sudo && echo "sudo" || echo "command")
+    $RUN chsh -s "$(which zsh)" "$USER" 2>/dev/null || chsh -s "$(which zsh)"
+  fi
 
   # Install zsh-autosuggestions custom plugin
   git clone --depth 1 \
     https://github.com/zsh-users/zsh-autosuggestions \
-    ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 2>/dev/null || true
-
+    ${ZSH_CUSTOM}/plugins/zsh-autosuggestions 2>/dev/null || true
 }
 
 install_nodejs() {
