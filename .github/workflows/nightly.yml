@@ -1,0 +1,17 @@
+name: Nightly
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Nightly
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run YADM Bootstrap
+        run: |
+          sh -c "$(curl -fsSL https://raw.githubusercontent.com/benemer/dotfiles/main/tools/install.sh)"
