@@ -1,3 +1,8 @@
+gitlab-runner(){
+    STAGE="$1"
+    docker run --entrypoint bash --rm -w "$PWD" -v "$PWD:$PWD" -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:v15.11.1 -c "git config --global --add safe.directory '*';gitlab-runner exec docker ${STAGE}"
+}
+
 get_remote() {
     git remote -vv | tail -n1 | awk '{print $2}' | tr -d '\n' | xcopy
 }
